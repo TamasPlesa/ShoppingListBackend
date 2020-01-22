@@ -1,0 +1,1 @@
+INSERT INTO products (id, name) values (1, 'sajt');
