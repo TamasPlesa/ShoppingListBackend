@@ -6,15 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="shoppingbackend" />
+        <module name="ShoppingListBackend" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="shoppingbackend" target="11" />
+    <bytecodeTargetLevel target="11">
+      <module name="backend" target="1.8" />
+      <module name="ShoppingListBackend" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ShoppingListBackend" options="-parameters" />
+      <module name="backend" options="-parameters" />
       <module name="shoppingbackend" options="-parameters" />
     </option>
   </component>

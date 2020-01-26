@@ -6,4 +6,8 @@ import com.shoppinglist.backend.model.User;
 
 public interface UserRepository extends CrudRepository<User, Long> {
 	
+	User findByUsername(String username);
+
+	User findByActivation(String activation);
+	
 }
