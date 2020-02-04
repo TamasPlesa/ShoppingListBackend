@@ -11,7 +11,6 @@ import com.shoppinglist.backend.repository.ProductRepository;
 @Service
 public class ProductService {
 
-
 	private ProductRepository productRepo;
 
 	@Autowired
@@ -29,10 +28,8 @@ public class ProductService {
 	}
 
 	public void addProduct(Product product,String holdername) {
-		if (productIsNotEmpty(product)) {
-			product.setHolderName(holdername);
-			productRepo.save(product);
-		}
+		product.setHolderName(holdername);
+		productRepo.save(product);
 	}
 
 	public void deleteProduct(long id) {
@@ -41,26 +38,12 @@ public class ProductService {
 
 	public Product editProduct(long id, Product update) {
 		Product product = productRepo.findById(id).get();
-		if (usernameIsNotEmpty(update)) {
+		if(update.getName() != null && !update.getName().trim().isEmpty() ) {
 			product.setName(update.getName());
 		}
-		if (priceIsNotZero(update)) {
-			product.setPrice(update.getPrice());
-		}
+		product.setPrice(update.getPrice());
 
 		return productRepo.save(product);
-	}
-
-	private boolean priceIsNotZero(Product update) {
-		return update.getPrice() != 0;
-	}
-
-	private boolean usernameIsNotEmpty(Product update) {
-		return update.getName() != null && !update.getName().trim().isEmpty();
-	}
-
-	private boolean productIsNotEmpty(Product product) {
-		return product.getName() != null && priceIsNotZero(product);
 	}
 
 }
