@@ -24,24 +24,26 @@ public class ProductService {
 	}
 
 	public Product findOne(Long id) {
-		return productRepo.findById(id).orElseThrow(() -> new IllegalStateException("Product not found"));
+		return productRepo.findById(id).orElseThrow(() -> new IllegalArgumentException("Product not found"));
 	}
 
-	public void addProduct(String name, int price, String holderName) {
-		productRepo.save(new Product(name, price, holderName));
+	public void addProduct(Product product,String holdername) {
+		product.setHolderName(holdername);
+		productRepo.save(product);
 	}
 
 	public void deleteProduct(long id) {
 		productRepo.deleteById(id);
 	}
 
-	public void editProduct(long id, Product update) {
+	public Product editProduct(long id, Product update) {
 		Product product = productRepo.findById(id).get();
-		if (product.getName() != null) {
+		if(update.getName() != null && !update.getName().trim().isEmpty() ) {
 			product.setName(update.getName());
 		}
 		product.setPrice(update.getPrice());
-		productRepo.save(product);
+		
+		return productRepo.save(product);
 	}
 
 }

@@ -1,0 +1,16 @@
+/Users/mbp/doneproject/shoppingListBackend/src/main/java/com/shoppinglist/backend/security/WebSecurity.java
+/Users/mbp/doneproject/shoppingListBackend/src/main/java/com/shoppinglist/backend/service/ProductService.java
+/Users/mbp/doneproject/shoppingListBackend/src/main/java/com/shoppinglist/backend/BackendApplication.java
+/Users/mbp/doneproject/shoppingListBackend/src/main/java/com/shoppinglist/backend/model/User.java
+/Users/mbp/doneproject/shoppingListBackend/src/main/java/com/shoppinglist/backend/model/Product.java
+/Users/mbp/doneproject/shoppingListBackend/src/main/java/com/shoppinglist/backend/security/AuthServerConfig.java
+/Users/mbp/doneproject/shoppingListBackend/src/main/java/com/shoppinglist/backend/security/ResourceServerConfig.java
+/Users/mbp/doneproject/shoppingListBackend/src/main/java/com/shoppinglist/backend/model/MyUserPrincipal.java
+/Users/mbp/doneproject/shoppingListBackend/src/main/java/com/shoppinglist/backend/service/MyUserDetailsService.java
+/Users/mbp/doneproject/shoppingListBackend/src/main/java/com/shoppinglist/backend/security/RevokeTokenEndpoint.java
+/Users/mbp/doneproject/shoppingListBackend/src/main/java/com/shoppinglist/backend/model/Role.java
+/Users/mbp/doneproject/shoppingListBackend/src/main/java/com/shoppinglist/backend/service/EmailService.java
+/Users/mbp/doneproject/shoppingListBackend/src/main/java/com/shoppinglist/backend/repository/UserRepository.java
+/Users/mbp/doneproject/shoppingListBackend/src/main/java/com/shoppinglist/backend/repository/ProductRepository.java
+/Users/mbp/doneproject/shoppingListBackend/src/main/java/com/shoppinglist/backend/controller/UserController.java
+/Users/mbp/doneproject/shoppingListBackend/src/main/java/com/shoppinglist/backend/controller/ProductController.java

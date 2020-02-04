@@ -3,9 +3,6 @@ package com.shoppinglist.backend.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-
-import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
 public class Product {
@@ -15,16 +12,11 @@ public class Product {
 	private Long id;
 	private String name;
 	private int price;
-	@ManyToOne
-	@JsonBackReference
-	private User user;
 	private String holderName;
 
 	public Product() {
 		super();
 	}
-	
-	
 
 	public Product(String name, int price, String holderName) {
 		super();
@@ -33,24 +25,19 @@ public class Product {
 		this.holderName = holderName;
 	}
 
-
-
 	public Product(String name, int price) {
 		super();
 		this.name = name;
 		this.price = price;
 	}
-	
-	
 
-	public Product(String name, int price, User user) {
-		super();
-		this.name = name;
-		this.price = price;
-		this.user = user;
+	public void setId(Long id) {
+		this.id = id;
 	}
-	
-	
+
+	public Long getId() {
+		return id;
+	}
 
 	public String getHolderName() {
 		return holderName;
@@ -76,14 +63,11 @@ public class Product {
 		this.price = price;
 	}
 
-	public User getUser() {
-		return user;
+	@Override
+	public String toString() {
+		return "Product [id=" + id + ", name=" + name + ", price=" + price + ", holderName=" + holderName + "]";
 	}
 
-	public void setUser(User user) {
-		this.user = user;
-	}
 	
 	
-
 }
