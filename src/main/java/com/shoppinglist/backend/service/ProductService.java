@@ -42,7 +42,7 @@ public class ProductService {
 			product.setName(update.getName());
 		}
 		product.setPrice(update.getPrice());
-		
+
 		return productRepo.save(product);
 	}
 
