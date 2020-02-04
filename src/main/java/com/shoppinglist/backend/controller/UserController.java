@@ -24,6 +24,8 @@ public class UserController {
 	@Lazy
 	private BCryptPasswordEncoder passwordEncoder;
 
+
+
 	@PostMapping(value = "/registration", produces = "application/json")
 	public void addUser(@RequestParam("username") String username, @RequestParam("email") String email,
 			@RequestParam("password") String password) {
@@ -38,4 +40,8 @@ public class UserController {
 	public void activation(@PathVariable("code") String code, HttpServletResponse response) {
 		userService.userActivation(code);
 	}
+
+
+
+
 }
