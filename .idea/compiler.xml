@@ -11,7 +11,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel target="11">
       <module name="backend" target="1.8" />
-      <module name="ShoppingListBackend" target="1.8" />
+      <module name="ShoppingListBackend" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
